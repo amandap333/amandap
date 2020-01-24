@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Amanda Proffit Profile`,
+    title: `Amanda Proffit Portfolio`,
     description: `This is my portfolio`,
     author: `Amanda Proffit`,
   },
@@ -13,6 +13,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
