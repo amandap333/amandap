@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-const WorkPage = () => (
-  <Layout>
+const WorkPage = ({location}) => (
+  <Layout location={location}>
     <SEO
       title="About"
       metadata="About me!"

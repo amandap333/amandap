@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-export default () => (
-  <Layout>
+const AboutPage = ({location}) => (
+  <Layout location={location}>
     <SEO
       title="About"
       metadata="About me!"
@@ -19,3 +19,5 @@ export default () => (
     </div>
   </Layout>
 )
+
+export default AboutPage

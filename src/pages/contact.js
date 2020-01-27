@@ -6,9 +6,9 @@ import Layout from "../components/layout"
 import SEO from '../components/seo'
 
 
-const ContactPage = () => {
+const ContactPage = ({location}) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO 
         title="Home" 
         description="This is a new description for the index page"

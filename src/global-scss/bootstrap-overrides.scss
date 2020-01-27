@@ -1,22 +1,22 @@
 $enable-responsive-font-sizes: true;
 
-$primary: #66fcf1;
-$secondary: #45a29e;
-$green: rgba(17, 151, 98, 1);
-$orange: rgba(249, 131, 85, 1);
-$red: rgba(174, 37, 38, 1);
-$purple: lighten(rgba(94, 60, 124, 1), 5%);
-$lightgray: rgba(223, 229, 237, 1);
+// $primary: #66fcf1;
+// $secondary: #45a29e;
+// $green: rgba(17, 151, 98, 1);
+// $orange: rgba(249, 131, 85, 1);
+// $red: rgba(174, 37, 38, 1);
+// $purple: lighten(rgba(94, 60, 124, 1), 5%);
+// $lightgray: rgba(223, 229, 237, 1);
 
-$success: $secondary;
-$warning: rgb(222, 147, 124);
-$danger: rgb(225, 90, 83);
-$light: #c5c6c7;
-$dark: rgba(0, 0, 0, .93);
-$medium: #1f2833;
+// $success: $secondary;
+// $warning: rgb(222, 147, 124);
+// $danger: rgb(225, 90, 83);
+// $light: #c5c6c7;
+// $dark: rgba(0, 0, 0, .93);
+// $medium: #1f2833;
 
-$link-color: $secondary;
-$link-hover-color: $primary;
+// $link-color: $secondary;
+// $link-hover-color: $primary;
 
 $grid-columns: 12;
 $grid-gutter-width: 30px;
@@ -43,20 +43,20 @@ $font-size-base: 1.2rem;
 //   background-color: $medium !important;
 // }
 
-ul,
-ol,
-p {
-  color: $light !important;
-}
+// ul,
+// ol,
+// p {
+//   color: $light !important;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $light !important;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   color: $light !important;
+// }
 
 a {
   transition: .2s ease-in;
