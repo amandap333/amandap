@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Amanda Proffit Portfolio`,
+    title: `Amanda Marie Proffit`,
     description: `This is my portfolio`,
     author: `Amanda Proffit`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

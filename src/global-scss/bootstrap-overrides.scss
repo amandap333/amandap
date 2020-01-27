@@ -1,0 +1,114 @@
+$enable-responsive-font-sizes: true;
+
+$primary: #66fcf1;
+$secondary: #45a29e;
+$green: rgba(17, 151, 98, 1);
+$orange: rgba(249, 131, 85, 1);
+$red: rgba(174, 37, 38, 1);
+$purple: lighten(rgba(94, 60, 124, 1), 5%);
+$lightgray: rgba(223, 229, 237, 1);
+
+$success: $secondary;
+$warning: rgb(222, 147, 124);
+$danger: rgb(225, 90, 83);
+$light: #c5c6c7;
+$dark: rgba(0, 0, 0, .93);
+$medium: #1f2833;
+
+$link-color: $secondary;
+$link-hover-color: $primary;
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$font-family-base: 'Open Sans', 'Adobe Blank';
+$font-size-base: 1.2rem;
+
+@import '~bootstrap/scss/bootstrap';
+
+// Required
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Optional
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/code';
+@import '~bootstrap/scss/grid';
+
+
+// body {
+//   background-color: $medium !important;
+// }
+
+ul,
+ol,
+p {
+  color: $light !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $light !important;
+}
+
+a {
+  transition: .2s ease-in;
+
+  &:hover {
+    transition: .2s ease-in;
+  }
+}
+
+// hr {
+//   border-color: $secondary !important;
+// }
+
+// .close {
+//   color: $light !important;
+// }
+
+// .modal-header {
+//   border-bottom: 1px solid $secondary !important;
+// }
+
+// .modal-title {
+//   font-size: 3.5rem;
+//   margin-bottom: -1.05rem;
+//   z-index: 1;
+// }
+
+// .form-control {
+//   background-color: transparent !important;
+//   color: $light;
+
+//   &:focus {
+//     color: $light;
+//   }
+// }
+
+// .alert-success {
+//   color: $primary;
+//   background-color: transparent;
+//   border-color: $primary;
+// }
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// textarea:-webkit-autofill,
+// textarea:-webkit-autofill:hover,
+// textarea:-webkit-autofill:focus,
+// select:-webkit-autofill,
+// select:-webkit-autofill:hover,
+// select:-webkit-autofill:focus {
+//   -webkit-text-fill-color: $secondary;
+//   -webkit-box-shadow: 0 0 0 0 transparent inset;
+//   transition: background-color 5000s ease-in-out 0s;
+// }
