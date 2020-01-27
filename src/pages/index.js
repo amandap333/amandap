@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 
-const IndexPage = ({location}) => (
+const IndexPage = ({ location }) => (
   <Layout location={location}>
     <SEO 
       title="Home" 

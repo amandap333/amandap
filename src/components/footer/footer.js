@@ -6,19 +6,23 @@ import Col from 'react-bootstrap/Col'
 
 import Sitemap from '../sitemap/sitemap'
 
+import './footer.scss'
 
-const Footer = ({location}) => {
+
+const Footer = ({ location }) => {
   return (
-    <Container fluid >
-      <Row>
-        <Col>
-          <Sitemap location={location} />
-          <p className="text-center">
-            © {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </p>
-        </Col>
-      </Row>
-    </Container>
+    <footer className="footer">
+      <Container fluid >
+        <Row>
+          <Col>
+            <Sitemap location={location} />
+            <p className="text-center">
+              © {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
   )
 }
 

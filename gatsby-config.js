@@ -5,6 +5,7 @@ module.exports = {
     author: `Amanda Proffit`,
   },
   plugins: [
+    `gatsby-transformer-json`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -12,6 +13,12 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
       },
     },
     `gatsby-transformer-sharp`,
