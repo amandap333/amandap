@@ -4,6 +4,9 @@ import { Link } from "gatsby"
 import Header from "../components/header/header"
 import Layout from "../components/layout"
 import SEO from '../components/seo'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
 const ContactPage = ({location}) => {
@@ -13,11 +16,13 @@ const ContactPage = ({location}) => {
         title="Home" 
         description="This is a new description for the index page"
       />
-      <div style={{ color: `teal` }}>
-        <Link to="/">Home</Link>
-        <Header headerText="Contact" />
-        <p>Send us a message!</p>
-      </div>
+      <container>
+      <Row>
+          <Col>
+            <h1>Contact me! </h1>
+          </Col>
+        </Row>
+      </container>
     </Layout>
   )
 }
