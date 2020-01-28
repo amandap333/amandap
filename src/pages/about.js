@@ -1,6 +1,5 @@
 import React from "react"
 
-import Header from "../components/header/header"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from 'react-bootstrap/Container'
@@ -18,9 +17,7 @@ const AboutPage = ({location}) => (
   <Container>
       <Row>
         <Col>
-        <h1>Amanda Marie Proffit</h1>
-        <p>Hello</p>
-        <p>Thank you</p>
+        <h1>ABOUT</h1>
         </Col>
       </Row>
     </Container>

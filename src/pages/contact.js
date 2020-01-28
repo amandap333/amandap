@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Header from "../components/header/header"
 import Layout from "../components/layout"
 import SEO from '../components/seo'
 import Container from 'react-bootstrap/Container'
@@ -16,13 +15,13 @@ const ContactPage = ({location}) => {
         title="Home" 
         description="This is a new description for the index page"
       />
-      <container>
+      <Container>
       <Row>
           <Col>
             <h1>Contact me! </h1>
           </Col>
         </Row>
-      </container>
+      </Container>
     </Layout>
   )
 }
