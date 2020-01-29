@@ -1,26 +1,26 @@
 [
   {
     "name" :"Amanda Proffit",
-    "image":"",
+    "image":"../images/amanda.jpg",
     "hobbies": "Going on hikes with my family and Pomeranian",
     "job": "software Developer"
   },
   
   {
     "name" : "Todd Proffit",
-    "image":"",
+    "image":"../images/amanda.jpg",
     "hobbies":"",
     "job":"Satelite Systems Operator"
   },
   {
     "name" :"Naomi Proffit",
-    "image":"",
+    "image":"../images/amanda.jpg",
     "hobbies":"Baby things",
     "job":"Being a baby"
   },
   {
     "name" :" Kathryn Marsh",
-    "image":"",
+    "image":"../images/amanda.jpg",
     "hobbies":"Being a grandma",
     "job":"Grandma things"
   }

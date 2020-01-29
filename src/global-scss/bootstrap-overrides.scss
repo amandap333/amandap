@@ -13,7 +13,7 @@ $lightgray: rgba(223, 229, 237, 1);
 // $danger: rgb(225, 90, 83);
 $light: #c5c6c7;
 $dark: #2E1114;
-// $medium: #1f2833;
+$medium: #6757b1;
 
 $mywhite: #fff;
 $myblack: #000;
@@ -42,15 +42,15 @@ $font-size-base: 1.2rem;
 @import '~bootstrap/scss/grid';
 
 
-// body {
-//   background-color: $medium !important;
-// }
+body {
+  background-color: $light;
+}
 
-// ul,
-// ol,
-// p {
-//   color: $light !important;
-// }
+ul,
+ol,
+p {
+  color: $purple;
+}
 
 h1,
 h2,
@@ -58,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $purple;
+  color: $secondary;
 }
 
 a {

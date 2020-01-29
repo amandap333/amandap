@@ -1,11 +1,11 @@
 import React from 'react'
-import { useStaticQuery, graphql }from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-// import Button from 'react-bootstrap/Button'
 
 
 const Familycards =({ location }) => {
@@ -16,43 +16,49 @@ const Familycards =({ location }) => {
           node {
             job
             hobbies
-            image
             name
+            image {
+              childImageSharp {
+                fluid(maxWidth: 400, maxHeight: 400, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
   `)
 
-  console.log(data.allFamilyDataJson.edges)
-
   const familyInfo = data.allFamilyDataJson.edges
+
+  // console.log(familyInfo[0].node.image.childImageSharp.fluid)
   
   return (
     <Container fluid >
       <Row>
-          {
-            familyInfo.map((edge, index) => {
-              const job = edge.node.job
-              const hobbies = edge.node.hobbies
-              const image = edge.node.image   
-              const name= edge.node.name                   
-              return (
-                <Col md={6} lg={4} >
-                  <Card key={index}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
-                    <Card.Body>
-                      <Card.Title>{name}</Card.Title>
-                        <p className="card-text">{job}</p>
-                        <p className="card-text">{hobbies}</p>
-                        <p className="card-text">{image}</p>
-                      {/* <Button variant="primary">Go somewhere</Button> */}
-                    </Card.Body>
-                  </Card>
-                </Col>
-              )
-            }
-          )}
+        {
+          familyInfo.map((edge, index) => {
+            const job = edge.node.job
+            const hobbies = edge.node.hobbies 
+            const name = edge.node.name
+            const image = edge.node.image.childImageSharp.fluid
+            // console.log(edge.node.image.childImageSharp.fluid)
+
+            return (
+              <Col md={6} lg={4} key={index} >
+                <Card>
+                  <Img className="card-image" fluid={image} />
+                  <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                    <p className="card-text">{job}</p>
+                    <p className="card-text">{hobbies}</p>
+                  </Card.Body>
+                </Card>
+              </Col>
+            )
+          })
+        }
       </Row>
     </Container>
   )

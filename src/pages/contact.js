@@ -33,9 +33,9 @@ const ContactPage = ({ location }) => {
                 <Form.Label>Send me a message!</Form.Label>
                 <Form.Control as="textarea" rows="3" />
               </Form.Group>
-              <Form.Group controlId="formBasicCheckbox">
+              {/* <Form.Group controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Send me reminders" />
-              </Form.Group>
+              </Form.Group> */}
               <Button variant="primary" type="submit" to="amandamarie2567@gmail.com">
                 Submit
               </Button>

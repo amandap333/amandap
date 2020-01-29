@@ -36,7 +36,6 @@ const Header = ({ siteTitle, location }) => {
               navigationData.map((edge, index) => {
                 const path = edge.node.path
                 const title = edge.node.title
-                console.log(location)
                 return (
                   <Link 
                     key={index}

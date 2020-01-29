@@ -14,10 +14,16 @@ const AboutPage = ({ location }) => (
       metadata="About me!"
       description="About Amanda Proffit"
     />
-  <Container>
+  <Container fluid>
       <Row>
         <Col>
-        <h1>ABOUT</h1>
+        <h1>About Amanda Proffit</h1>
+        <div>
+          <p>PPCC Graduate 2020 of CIS and AGS</p>
+          <p>
+            I am currently employed with BSCS Science Learning. I love animals and have 2 cats, 2 dogs and 2 rabbits. My cats names are Setrene and Khalessi. My dogs names are Zeus and Daisy. My husband named my rabbits, and they are Steve and Lily. My husband and I have a daughter named Naomi and she has the best laugh. I currently obtain a 3.56 GPA.
+          </p>
+        </div>
         </Col>
       </Row>
     </Container>
