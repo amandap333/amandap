@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useStaticQuery } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -35,20 +35,20 @@ const Sitemap = ({ location }) => {
               navigationData.map((edge, index) => {
                 const path = edge.node.path
                 const title = edge.node.title
-                return(
+                return (
                   <Link 
-                      key={index}
-                      to={path}
-                      className={
-                        location.pathname === path
-                        ?
-                          `nav-link active disabled`
-                        :
-                          `nav-link`
-                      }
-                    >
-                      {title}
-                    </Link>
+                    key={index}
+                    to={path}
+                    className={
+                      location.pathname === path
+                      ?
+                        `nav-link active disabled`
+                      :
+                        `nav-link`
+                    }
+                  >
+                    {title}
+                  </Link>
                 )
               })
             }

@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import Familycards from '../components/famcards'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -18,7 +19,7 @@ const Family = ({ location }) => {
       <Container>
         <Row>
           <Col>
-            <h1>Family</h1>
+            <Familycards location={location} />
           </Col>
         </Row>
       </Container>

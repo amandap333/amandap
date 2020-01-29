@@ -7,28 +7,18 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header/header'
 import Footer from './footer/footer'
 
+import 'typeface-open-sans'
 import '../global-scss/index.scss'
 
 
 const Layout = ({ children, location }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <React.Fragment>
-      <Header />
+      <Header location={location} />
       <main>{children}</main>
       <Footer location={location} />
     </React.Fragment>

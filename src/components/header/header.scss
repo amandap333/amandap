@@ -2,11 +2,20 @@
 
 
 .mr-auto {
-text-emphasis-color: green;
+  text-emphasis-color: $mygreen;
 }
+
 .nav-link {
-font-family: Georgia, 'Times New Roman', Times, serif;
+  color: $mywhite !important;
+
+  &:hover {
+    color: $primary !important;
+  }
 }
+
 #basic-navbar-nav {
-color:pink;
+  color:pink;
+}
+.bg {
+  background-color: purple;
 }

@@ -7,12 +7,12 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 
-const AboutPage = ({location}) => (
-  <Layout location={location}>
+const AboutPage = ({ location }) => (
+  <Layout location={location} >
     <SEO
       title="About"
       metadata="About me!"
-      description="this is all about me"
+      description="About Amanda Proffit"
     />
   <Container>
       <Row>

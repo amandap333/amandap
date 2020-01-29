@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 
-const WorkPage = ({location}) => (
+const WorkPage = ({ location }) => (
   <Layout location={location}>
     <SEO
       title="About"

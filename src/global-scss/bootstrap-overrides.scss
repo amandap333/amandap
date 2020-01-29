@@ -2,7 +2,7 @@ $enable-responsive-font-sizes: true;
 
 $primary: #ADADAD;
 $secondary: #64485C;
-// $green: rgba(17, 151, 98, 1);
+$mygreen: rgba(17, 151, 98, 1);
 // $orange: rgba(249, 131, 85, 1);
 // $red: rgba(174, 37, 38, 1);
 $purple: #83677B;
@@ -14,6 +14,9 @@ $lightgray: rgba(223, 229, 237, 1);
 $light: #c5c6c7;
 $dark: #2E1114;
 // $medium: #1f2833;
+
+$mywhite: #fff;
+$myblack: #000;
 
 // $link-color: $secondary;
 // $link-hover-color: $primary;
@@ -49,14 +52,14 @@ $font-size-base: 1.2rem;
 //   color: $light !important;
 // }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   color: $light !important;
-// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $purple;
+}
 
 a {
   transition: .2s ease-in;
