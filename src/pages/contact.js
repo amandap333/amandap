@@ -29,14 +29,14 @@ const ContactPage = ({ location }) => {
                 </Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group> 
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Label>Send me a message!</Form.Label>
+                <Form.Control as="textarea" rows="3" />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Form.Group controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Send me reminders" />
+              </Form.Group>
+              <Button variant="primary" type="submit" to="amandamarie2567@gmail.com">
                 Submit
               </Button>
             </Form>
