@@ -15,7 +15,7 @@ const IndexPage = ({ location }) => {
     query {
       placeholderImage: file(relativePath: { eq: "amanda.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -29,7 +29,7 @@ const IndexPage = ({ location }) => {
         title="Home" 
         description="This is a new description for the index page"
       />
-      <Container justify content>
+      <Container justify content max-width="100px" min-height="500px">
         <Row>
           <Col>
             <h1>Amanda Marie Proffit</h1>

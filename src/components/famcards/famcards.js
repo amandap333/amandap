@@ -47,7 +47,7 @@ const Familycards =({ location }) => {
 
             return (
               <Col md={6} lg={4} key={index} >
-                <Card>
+                <Card className="border-secondary" style={{minHeight: "40rem"}} >
                   <Img className="card-image" fluid={image} />
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
