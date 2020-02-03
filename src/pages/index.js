@@ -10,12 +10,13 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 
+
 const IndexPage = ({ location }) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "amanda.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
+          fluid(maxWidth: 200, maxHeight: 200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -29,19 +30,19 @@ const IndexPage = ({ location }) => {
         title="Home" 
         description="This is a new description for the index page"
       />
-      <Container justify content max-width="100px" min-height="500px">
-        <Row>
-          <Col>
+      <Container height="100%">
+        <Row >
+          <Col className="text-center" >
             <h1>Amanda Marie Proffit</h1>
           </Col>
         </Row>
         <Row className="justify-content-center">
           <Col md={4}>
-            <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+            <Img id="amanda" className="border border-secondary rounded" fluid={data.placeholderImage.childImageSharp.fluid} alt="Amanda Proffit"/>
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="text-center">
             <div>
               <p>Hello! Welcome to my site :)</p>
               <p></p>

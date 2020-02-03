@@ -46,6 +46,10 @@ body {
   background-color: $light;
 }
 
+main {
+  height: 100%;
+}
+
 ul,
 ol,
 p {
@@ -68,6 +72,7 @@ a {
     transition: .2s ease-in;
   }
 }
+
 
 // hr {
 //   border-color: $secondary !important;
