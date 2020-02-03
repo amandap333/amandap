@@ -1,4 +1,12 @@
-.image-border {
+.imageBorder {
   border: medium;
   border-color: $secondary;
+}
+
+.smallPicture {
+  min-height: 10em;
+  min-width: 10em;
+  margin: 3rem;
+  padding: 3rem;
+  float: left;
 }

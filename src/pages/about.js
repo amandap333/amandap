@@ -30,7 +30,6 @@ const AboutPage = ({ location }) => {
       }
     }
   `)
-  console.log(data)
   const animalPictures = data.allFile.edges
 
   return (
@@ -56,6 +55,7 @@ const AboutPage = ({ location }) => {
                 <Img 
                   key={index} 
                   fluid={edge.node.childImageSharp.fluid} 
+                  className="smallPicture imageBorder"
                 />
               )
             })
