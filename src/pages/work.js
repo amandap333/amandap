@@ -12,7 +12,7 @@ const WorkPage = ({ location }) => (
       metadata="About me!"
       description="this is all about me"
     />
-    <div>
+    <div style={{}}>
     <h1>About</h1>
     </div>
     <div>

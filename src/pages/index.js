@@ -30,7 +30,7 @@ const IndexPage = ({ location }) => {
         title="Home" 
         description="This is a new description for the index page"
       />
-      <Container height="100%">
+      <Container>
         <Row >
           <Col className="text-center" >
             <h1>Amanda Marie Proffit</h1>
@@ -38,7 +38,10 @@ const IndexPage = ({ location }) => {
         </Row>
         <Row className="justify-content-center">
           <Col md={4}>
-            <Img id="amanda" className="border border-secondary rounded" fluid={data.placeholderImage.childImageSharp.fluid} alt="Amanda Proffit"/>
+            <Img 
+              className="border border-secondary rounded amanda" 
+              fluid={data.placeholderImage.childImageSharp.fluid} 
+              alt="Amanda Proffit"/>
           </Col>
         </Row>
         <Row>

@@ -10,6 +10,10 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 const ContactPage = ({ location }) => {
+  const handleFormSubmit = (e) => {
+
+  }
+  
   return (
     <Layout location={location}>
       <SEO 
@@ -33,10 +37,7 @@ const ContactPage = ({ location }) => {
                 <Form.Label>Send me a message!</Form.Label>
                 <Form.Control as="textarea" rows="3" />
               </Form.Group>
-              {/* <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Send me reminders" />
-              </Form.Group> */}
-              <Button variant="primary" type="submit" to="amandamarie2567@gmail.com">
+              <Button variant="primary" type="submit" onClick={handleFormSubmit}>
                 Submit
               </Button>
             </Form>
