@@ -27,7 +27,7 @@ const ContactForm = (props) => {
       "firstname": firstname,
       "lastname": lastname,
       "sendto": "Amanda Proffit",
-      "form_type": "SpecificContactForm"
+      "form_name": "SpecificContactForm"
     }
 
     try {
