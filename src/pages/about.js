@@ -23,6 +23,7 @@ const AboutPage = ({ location }) => {
                 sizes
                 src
                 srcSet
+                
               }
             }
           }
@@ -45,10 +46,12 @@ const AboutPage = ({ location }) => {
         <Col>
         <h1>About Amanda Proffit</h1>
         <div>
-          <p>PPCC Graduate 2020 of CIS and AGS</p>
-          <p>
-            I am currently employed with BSCS Science Learning. I love animals and have 2 cats, 2 dogs and 2 rabbits. My cats names are Setrene and Khalessi. My dogs names are Zeus and Daisy. My husband named my rabbits, and they are Steve and Lily. My husband and I have a daughter named Naomi and she has the best laugh. I currently obtain a 3.5 GPA from PPCC.
+          <h2>PPCC Graduate 2020</h2>
+          <p style={{color:'black'}} className="center">
+            Orginally from North Carolina, I moved to Colorado in 2014.
+            I am currently employed with BSCS Science Learning. I love animals and have 2 cats, 2 dogs and 2 rabbits. My cats names are Setrene and Khalessi. My dogs names are Zeus and Daisy. My husband named my rabbits, and they are Steve and Lily. My husband and I have a daughter named Naomi and she has the best laugh. Current GPA:3.5
           </p>
+          <div>
           {
             animalPictures.map((edge, index) => {
               return (
@@ -60,7 +63,7 @@ const AboutPage = ({ location }) => {
               )
             })
           }
-          
+        </div>
         </div>
 
         </Col>

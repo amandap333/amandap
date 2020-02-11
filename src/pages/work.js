@@ -13,10 +13,8 @@ const WorkPage = ({ location }) => (
       description="this is all about me"
     />
     <div style={{}}>
-    <h1>About</h1>
-    </div>
-    <div>
-    <p>Welcome to page 2</p>
+    <h1>Resume!</h1>
+    <iframe src="work.js"></iframe>
     </div>
   </Layout>
 )

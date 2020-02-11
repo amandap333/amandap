@@ -17,6 +17,7 @@ const Familycards =({ location }) => {
             job
             hobbies
             name
+            alt
             image {
               childImageSharp {
                 fluid(maxWidth: 400, maxHeight: 400, quality: 100) {
@@ -43,12 +44,13 @@ const Familycards =({ location }) => {
             const hobbies = edge.node.hobbies 
             const name = edge.node.name
             const image = edge.node.image.childImageSharp.fluid
+            const alt = edge.node.alt
             // console.log(edge.node.image.childImageSharp.fluid)
 
             return (
               <Col md={6} lg={4} key={index} >
                 <Card className="border-secondary m-3" style={{minHeight: "40rem"}} >
-                  <Img className="card-image" fluid={image} />
+                  <Img className="card-image" fluid={image} alt={alt} />
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <p className="card-text">{job}</p>

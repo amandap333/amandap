@@ -1,27 +1,31 @@
 [
   {
-    "name" :"Amanda Proffit",
-    "image":"../images/amanda.jpg",
+    "name": "Amanda Proffit",
+    "image": "../images/amanda.jpg",
     "hobbies": "My hobbies include: going on hikes with my family and Pomeranian, spending quality time with my daughter and watching Supernatural. ",
-    "job": "Software Developer"
+    "job": "Software Developer",
+    "alt": "Amanda Proffit"
   },
   
   {
-    "name" : "Todd Proffit",
-    "image":"../images/todd.jpg",
-    "hobbies":"Some of Todds favorite hobbies include: readning manga, watching anime with our daughter and riding his bike.",
-    "job":"SATCOM"
+    "name": "Todd Proffit",
+    "image": "../images/todd.jpg",
+    "hobbies": "Some of Todds favorite hobbies include: readning manga, watching anime with our daughter and riding his bike.",
+    "job": "SATCOM",
+    "alt": "Todd"
   },
   {
-    "name" :"Naomi Proffit",
-    "image":"../images/naomi.jpg",
-    "hobbies":"Naomi enjoys going to her gym class every week and playing with her baby friends",
-    "job":"Being a baby"
+    "name" : "Naomi Proffit",
+    "image": "../images/naomi.jpg",
+    "hobbies": "Naomi enjoys going to her gym class every week and playing with her baby friends",
+    "job": "Being a baby",
+    "alt": "Naomi"
   },
   {
-    "name" :" Kathryn Marsh",
-    "image":"../images/amanda.jpg",
-    "hobbies":"Kathryn enjoys playing games on her phone to pass the time along with watching 'The Five'",
-    "job":"Retired teacher currently excelling at being a Grandma."
+    "name" : " Kathryn Marsh",
+    "image": "../images/mom.jpg",
+    "hobbies": "Kathryn enjoys playing games on her phone to pass the time along with watching 'The Five'",
+    "job": "Retired teacher currently excelling at being a Grandma.",
+    "alt": "Grandma"
   }
 ]
