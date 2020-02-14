@@ -88,7 +88,7 @@ const ContactForm = (props) => {
         // <Spinner animation="grow" variant="primary" />
       }
       {/* {!loading && */}
-        <Form action="POST" data-netlify="true">
+        <form method="POST" data-netlify="true">
         <Form.Group controlId="contact-form-email">
           <Form.Label>Email address</Form.Label>
             <Form.Control
@@ -136,7 +136,7 @@ const ContactForm = (props) => {
           >
             Submit
           </Button>
-        </Form>
+        </form>
       {/* } */}
     </React.Fragment>
   )
