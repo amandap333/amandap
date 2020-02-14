@@ -29,7 +29,7 @@ const ContactForm = (props) => {
     <button type="submit">Send</button>
   </p>
 </form>
-  )}
+  )} 
 
   export default ContactForm
   // const [loading, setLoading] = useState(false)
