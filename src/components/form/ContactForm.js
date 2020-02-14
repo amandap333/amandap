@@ -88,7 +88,7 @@ const ContactForm = (props) => {
         <Spinner animation="grow" variant="primary" />
       }
       {!loading &&
-        <Form>
+        <Form method="POST" data-netlify="true">
           <Form.Group controlId="contact-form-email">
             <Form.Label>Email address</Form.Label>
             <Form.Control
