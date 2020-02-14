@@ -88,13 +88,14 @@ const ContactForm = (props) => {
         // <Spinner animation="grow" variant="primary" />
       }
       {/* {!loading && */}
-        <Form method="POST" data-netlify="true">
+        <Form action="POST" data-netlify="true">
         <Form.Group controlId="contact-form-email">
           <Form.Label>Email address</Form.Label>
             <Form.Control
               // onChange={handleSetEmail}
                         placeholder="Enter email"
               type="email"
+              name="email"
             />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
