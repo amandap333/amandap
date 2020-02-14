@@ -5,8 +5,18 @@ import React from 'react'
 const ContactForm = () => {
   return (
 
-    <form name="contact" method="POST" data-netlify="true">
+    <form 
+    name="contact" 
+    method="POST" 
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    >
       <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+          <label>
+            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+          </label>
+        </p>
         <p>
           <label>Your First Name: <input type="text" name="firstname" /></label>  
         </p>
