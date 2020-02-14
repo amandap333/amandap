@@ -108,6 +108,7 @@ const ContactForm = (props) => {
               // onChange={handleSetFirstName}
               placeholder="First Name"
               type="text"
+              name="firstname"
             />
           </Form.Group>
 
@@ -117,6 +118,7 @@ const ContactForm = (props) => {
               // onChange={handleSetLastName}
               placeholder="Last Name"
               type="text"
+              name="lastname"
             />
           </Form.Group>
 
