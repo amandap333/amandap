@@ -7,9 +7,9 @@ import React from 'react'
 // import Spinner from 'react-bootstrap/Spinner'
 
 
-const ContactForm = (props) => {
+const ContactForm = () => {
   return (
-  <form name="contactform" action="POST" data-netlify="true">
+  <form name="contactform" method="POST" data-netlify="true">
   <p>
     <label>First Name: <input type="text" name="firstname" /></label>   
   </p>
