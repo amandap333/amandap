@@ -20,7 +20,7 @@ const ContactForm = () => {
 
     >
       <input type="hidden" name="form-name" value="contact"  />
-        <p  hidden>
+        <p hidden> 
           <label>Don’t fill this out: </label>
           <input name="bot-field"/>
         </p>
