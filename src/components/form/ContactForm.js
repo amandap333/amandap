@@ -1,26 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // import axios from 'axios'
 
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
+// import Button from 'react-bootstrap/Button'
+// import Form from 'react-bootstrap/Form'
 // import Spinner from 'react-bootstrap/Spinner'
 
 
 const ContactForm = (props) => {
   return (
-  <form name="contact" action="POST" data-netlify="true">
+  <form name="contactform" action="POST" data-netlify="true">
   <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
+    <label>First Name: <input type="text" name="firstname" /></label>   
+  </p>
+  <p>
+    <label>Last Name: <input type="text" name="lastname" /></label>   
   </p>
   <p>
     <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
   </p>
   <p>
     <label>Message: <textarea name="message"></textarea></label>
