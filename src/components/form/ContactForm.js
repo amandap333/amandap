@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import Spinner from 'react-bootstrap/Spinner'
+// import Spinner from 'react-bootstrap/Spinner'
 
 
 const ContactForm = (props) => {
@@ -85,15 +85,15 @@ const ContactForm = (props) => {
   return (
     <React.Fragment>
       {/* {loading && */}{
-        <Spinner animation="grow" variant="primary" />
+        // <Spinner animation="grow" variant="primary" />
       }
       {/* {!loading && */}
         <Form method="POST" data-netlify="true">
-          <Form.Group controlId="contact-form-email">
-            <Form.Label>Email address</Form.Label>
+        <Form.Group controlId="contact-form-email">
+          <Form.Label>Email address</Form.Label>
             <Form.Control
               // onChange={handleSetEmail}
-              placeholder="Enter email"
+                        placeholder="Enter email"
               type="email"
             />
             <Form.Text className="text-muted">
@@ -134,9 +134,10 @@ const ContactForm = (props) => {
             Submit
           </Button>
         </Form>
-      }
+      {/* } */}
     </React.Fragment>
   )
 }
+
 
 export default ContactForm
