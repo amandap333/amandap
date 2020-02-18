@@ -9,7 +9,7 @@ sections:
   label: data
   create: documents
   match: "**/*"
-  new_doc_ext: ".json"
+  new_doc_ext: json
 upload_dir: src/images
 public_path: ''
 front_matter_path: ''
