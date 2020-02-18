@@ -9,9 +9,6 @@ sections:
   label: Content
   create: all
   match: "**/*"
-- type: document
-  path: package.json
-  label: Config
 upload_dir: src/images
 public_path: ''
 front_matter_path: ''
