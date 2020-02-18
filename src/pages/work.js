@@ -1,11 +1,24 @@
 
 import React from 'react'
-
+import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+const WorkPage = ({ location }) => {
+  const data = useStaticQuery(graphql`
+  {
+    allFile(filter: { extension: { eq: "pdf" } }) {
+      edges {
+        node {
+          publicURL
+          name
+        }
+      }
+    }
+  }
+`)
+return (
 
-const WorkPage = ({ location }) => (
   <Layout location={location}>
     <SEO
       title="About"
@@ -14,9 +27,9 @@ const WorkPage = ({ location }) => (
     />
     <div style={{}}>
     <h1>Resume!</h1>
-    <iframe src="work.js"></iframe>
     </div>
   </Layout>
 )
+}
 
 export default WorkPage
