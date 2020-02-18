@@ -10,8 +10,8 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: json
-upload_dir: src/images
-public_path: ''
+upload_dir: static/assets
+public_path: "/static/assets"
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
