@@ -1,22 +1,10 @@
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const WorkPage = ({ location }) => {
-  const data = useStaticQuery(graphql`
-  {
-    allFile(filter: { extension: { eq: "pdf" } }) {
-      edges {
-        node {
-          publicURL
-          name
-        }
-      }
-    }
-  }
-`)
+
 return (
 
   <Layout location={location}>
@@ -27,6 +15,7 @@ return (
     />
     <div style={{}}>
     <h1>Resume!</h1>
+    <iframe src="amanda_resume.pdf" height="400"></iframe>
     </div>
   </Layout>
 )
