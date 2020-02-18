@@ -15,7 +15,7 @@ return (
     />
     <div style={{}}>
     <h1>Resume!</h1>
-    <iframe  title="myResume" src="/assets/resume.pdf." height="700"  width ="600" alt="resume"></iframe>
+    <iframe  title="myResume" src="assets/amanda_resume.pdf" height="700"  width ="600" alt="resume"></iframe>
     </div>
   </Layout>
 )
