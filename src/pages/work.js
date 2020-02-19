@@ -14,8 +14,8 @@ return (
       description="this is all about me"
     />
     <div style={{}}>
-    <h1>Resume!</h1>
-    <iframe  title="myResume" src="/assets/amanda_resume-2.pdf" height="700"  width ="600" alt="resume" className="centerBorder center"></iframe>
+    <h1 className="centerText">Resume!</h1>
+    <iframe  title="myResume" src="/assets/amanda_resume-2.pdf" height="700"  width ="600" alt="resume" className="centerBorder center borderBlue"></iframe>
     </div>
   </Layout>
 )

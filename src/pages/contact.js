@@ -20,8 +20,8 @@ const ContactPage = ({ location }) => {
       <Container>
       <Row>
           <Col>
-            <h1>Contact me!</h1>
-            <ContactForm />
+            <h1 className="centerText">Contact me!</h1>
+            <ContactForm/>
           </Col>
         </Row>
       </Container>
