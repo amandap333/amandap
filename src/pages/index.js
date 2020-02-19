@@ -39,7 +39,7 @@ const IndexPage = ({ location }) => {
         <Row className="justify-content-center">
           <Col md={4}>
             <Img 
-              className="border border-secondary rounded rainbow" 
+              className="border border-secondary rounded checker" 
               fluid={data.placeholderImage.childImageSharp.fluid} 
               alt="Amanda Proffit"/>
           </Col>
@@ -47,7 +47,7 @@ const IndexPage = ({ location }) => {
         <Row>
           <Col className="text-center">
             <div>
-              <p>Hello! Welcome to my site :)</p>
+              <p className="bottom">Hello! Welcome to my site :)</p>
               <p></p>
             </div>
           </Col>
