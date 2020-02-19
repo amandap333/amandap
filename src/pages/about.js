@@ -58,7 +58,7 @@ const AboutPage = ({ location }) => {
                 <Img 
                   key={index} 
                   fluid={edge.node.childImageSharp.fluid} 
-                  className="smallPicture imageBorder rainbow"
+                  className="smallPicture purpleBorder"
                 />
               )
             })
