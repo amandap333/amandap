@@ -47,7 +47,7 @@ const IndexPage = ({ location }) => {
         <Row>
           <Col className="text-center">
             <div>
-              <p className="bottom">Hello! Welcome to my site :)</p>
+              <h2 className="bottom">Hello! Welcome to my site :)</h2>
               <p></p>
             </div>
           </Col>
