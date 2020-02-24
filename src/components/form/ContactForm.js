@@ -12,14 +12,16 @@ const ContactForm = () => {
   };
 
   return (
-    <form>
+    <form
+      name="contact" 
+      method="POST" 
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit(onSubmit)}
+      className="centerBorder formStyle borderBlue"
+    >
     <Form 
-    name="contact" 
-    method="POST" 
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-    onSubmit={handleSubmit(onSubmit)}
-    className="centerBorder formStyle borderBlue"
+    
 
     >
       <input type="hidden" name="form-name" value="contact"  />
