@@ -12,7 +12,7 @@ const ContactForm = () => {
   };
 
   return (
-
+    <form>
     <Form 
     name="contact" 
     method="POST" 
@@ -66,6 +66,7 @@ const ContactForm = () => {
         </p>
 
     </Form>
+    </form>
   )
 } 
 

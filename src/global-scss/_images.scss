@@ -51,22 +51,20 @@
   border-radius: 40px;
   }
 
-  .rainbow {
-    -webkit-box-shadow: 5px 5px 15px 5px rgb(97, 66, 80), -9px 5px 15px 5px #805BA5, -7px -5px 15px 5px #2A1B3D, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px $secondary, -10px 10px 15px 7px $secondary, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 5px 5px 15px 5px rgb(97,66,80), -9px 5px 15px 5px #805BA5, -7px -5px 15px 5px #2A1B3D, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px $secondary, -10px 10px 15px 7px $secondary, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
-    }
+.rainbow {
+  -webkit-box-shadow: 5px 5px 15px 5px rgb(97, 66, 80), -9px 5px 15px 5px #805BA5, -7px -5px 15px 5px #2A1B3D, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px $secondary, -10px 10px 15px 7px $secondary, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 5px 5px 15px 5px rgb(97,66,80), -9px 5px 15px 5px #805BA5, -7px -5px 15px 5px #2A1B3D, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px $secondary, -10px 10px 15px 7px $secondary, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+}
 
-    .purpleBorder{
-      -webkit-box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 0px 0px 8px 12px rgba(239,207,255,0.84); 
-    box-shadow: 0px 0px 0px 5px  $primary , inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 0px 0px 8px 12px $secondary;
-    }
+.purpleBorder{
+  -webkit-box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 0px 0px 8px 12px rgba(239,207,255,0.84); 
+  box-shadow: 0px 0px 0px 5px  $primary , inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 0px 0px 8px 12px $secondary;
+}
 
-    .checker {
-      -webkit-box-shadow: 10px 0 0 #F0F0F0, 20px 0 0 $secondary, 30px 0 0 #F0F0F0, 0 10px 0 #F0F0F0, 10px 10px 0 $secondary, 20px 10px 0 #F0F0F0, 30px 10px 0 $secondary, 0 20px 0 $secondary, 10px 20px 0 #F0F0F0, 20px 20px 0 $secondary, 30px 20px 0 #F0F0F0, 0 30px 0 #F0F0F0, 10px 30px 0 $secondary, 20px 30px 0 #F0F0F0, 30px 30px 0 $secondary, 5px 5px 15px 5px rgba(100,72,92,0); 
-      box-shadow: 10px 0 0 #F0F0F0, 20px 0 0 $secondary, 30px 0 0 #F0F0F0, 0 10px 0 #F0F0F0, 10px 10px 0 $secondary, 20px 10px 0 #F0F0F0, 30px 10px 0 $secondary, 0 20px 0 $secondary, 10px 20px 0 #F0F0F0, 20px 20px 0 $secondary, 30px 20px 0 #F0F0F0, 0 30px 0 #F0F0F0, 10px 30px 0 $secondary, 20px 30px 0 #F0F0F0, 30px 30px 0 $secondary, 5px 5px 15px 5px rgba(100,72,92,0);
-      }
-      .bottom {
-        position: absolute;
-        left: 340px;
-        top: 90px;
-      }
+.checker {
+  -webkit-box-shadow: 10px 0 0 #F0F0F0, 20px 0 0 $secondary, 30px 0 0 #F0F0F0, 0 10px 0 #F0F0F0, 10px 10px 0 $secondary, 20px 10px 0 #F0F0F0, 30px 10px 0 $secondary, 0 20px 0 $secondary, 10px 20px 0 #F0F0F0, 20px 20px 0 $secondary, 30px 20px 0 #F0F0F0, 0 30px 0 #F0F0F0, 10px 30px 0 $secondary, 20px 30px 0 #F0F0F0, 30px 30px 0 $secondary, 5px 5px 15px 5px rgba(100,72,92,0); 
+  box-shadow: 10px 0 0 #F0F0F0, 20px 0 0 $secondary, 30px 0 0 #F0F0F0, 0 10px 0 #F0F0F0, 10px 10px 0 $secondary, 20px 10px 0 #F0F0F0, 30px 10px 0 $secondary, 0 20px 0 $secondary, 10px 20px 0 #F0F0F0, 20px 20px 0 $secondary, 30px 20px 0 #F0F0F0, 0 30px 0 #F0F0F0, 10px 30px 0 $secondary, 20px 30px 0 #F0F0F0, 30px 30px 0 $secondary, 5px 5px 15px 5px rgba(100,72,92,0);
+}
+.bottom {
+left: 90px;
+}
