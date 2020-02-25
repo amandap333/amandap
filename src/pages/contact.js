@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import ContactForm from '../components/form/ContactForm'
+import Contact from '../components/form/Contact'
 
 
 const ContactPage = ({ location }) => {
@@ -21,7 +21,7 @@ const ContactPage = ({ location }) => {
       <Row>
           <Col>
             <h1 className="centerText">Contact me!</h1>
-            <ContactForm/>
+            <Contact/>
           </Col>
         </Row>
       </Container>

@@ -4,9 +4,9 @@ import  { useForm } from 'react-hook-form'
 // import Form from 'react-bootstrap/Form'
 
 
-const ContactForm = () => {
+const Contact = () => {
   
-  const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = data => {
     console.log(data)
   };
@@ -63,8 +63,8 @@ const ContactForm = () => {
           <button type="submit" class="btn btn-outline-secondary">Send</button>
         </p>
     </form>
-  )
-} 
+  );
+};
 
-  export default ContactForm
+  export default Contact
   
