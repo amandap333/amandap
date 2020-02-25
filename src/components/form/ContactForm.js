@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 
 
 const ContactForm = () => {
-
+  
   const { register, handleSubmit, errors } = useForm()
   const onSubmit = data => {
     console.log(data)
@@ -20,24 +20,20 @@ const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="centerBorder formStyle borderBlue"
     >
-    <Form 
-    
-
-    >
-      <input type="hidden" name="form-name" value="contact"  />
+    <input type="hidden" name="form-name" value="contact"  />
         <p hidden> 
           <label>Don’t fill this out:<input name="bot-field"/> </label>
           
         </p>
 
         <p>
-          <Form.Label>Your First Name:<Form.Control type="text" name="firstname"
+          <Form.Label>Your First Name:<input type="text" name="firstname"
           ref={register({ required: true, maxLength: 20 })}/>
           {errors.firstname && 'First name is required.'}</Form.Label>  
         </p>
 
         <p>
-          <Form.Label>Your Last Name: <Form.Control type="text" name="lastname"
+          <Form.Label>Your Last Name: <input type="text" name="lastname"
           ref={register({ required: true, maxLength: 20 })} />
           {errors.lastname && 'Last name is required.'}
           </Form.Label>  
@@ -45,7 +41,7 @@ const ContactForm = () => {
         </p>
 
         <p>
-          <Form.Label>Your Email:<Form.Control
+          <Form.Label>Your Email:<input
         name="email"
         ref={register({
           required: 'Required',
@@ -59,15 +55,13 @@ const ContactForm = () => {
         </p>
 
         <p>
-          <Form.Label>Message: <Form.Control as="textarea" rows="3"name="message"
+          <Form.Label>Message: <input as="textarea" rows="3"name="message"
           ref={register}/> </Form.Label>
         </p>
 
         <p>
           <Button type="submit" class="btn btn-outline-secondary">Send</Button>
         </p>
-
-    </Form>
     </form>
   )
 } 
