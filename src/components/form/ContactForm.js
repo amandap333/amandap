@@ -60,7 +60,7 @@ const ContactForm = () => {
         </p>
 
         <p>
-          <Button type="submit" class="btn btn-outline-secondary">Send</Button>
+          <button type="submit" class="btn btn-outline-secondary">Send</button>
         </p>
     </form>
   )
