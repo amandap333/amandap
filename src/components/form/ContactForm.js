@@ -1,7 +1,7 @@
 import React from 'react'
 import  { useForm } from 'react-hook-form'
-// import Button from 'react-bootstrap/Button'
-// import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 
 
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
       method="POST" 
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      // onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit)}
       className="needs-validationcenterBorder formStyle borderBlue" 
       >
     <input type="hidden" name="form-name" value="contact"  />
@@ -62,7 +62,7 @@ const Contact = () => {
         </p>
 
         <p>
-        <button className="btn btn-outline-primary"type="submit">Submit</button>
+        <button className="btn btn-outline-primary" type="submit">Submit</button>
         </p>
     </form>
   )
