@@ -17,8 +17,8 @@ const Contact = () => {
       method="POST" 
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit(onSubmit)}
-      className="centerBorder formStyle borderBlue" 
+      // onSubmit={handleSubmit(onSubmit)}
+      className="needs-validationcenterBorder formStyle borderBlue" 
       >
     <input type="hidden" name="form-name" value="contact"  />
         <p hidden> 
@@ -26,7 +26,7 @@ const Contact = () => {
         </p>
 
         <p>
-          <label>Your First Name:<input type="text" name="firstname"
+          <label>Your First Name:<input type="text" className="form-control" name="firstname"
           ref={register({ required: true, maxLength: 20 })}/>
           {errors.firstname && 'First name is required.'}</label>  
         </p>
