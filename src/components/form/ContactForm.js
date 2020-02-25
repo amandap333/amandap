@@ -35,7 +35,7 @@ const Contact = () => {
         </p>
 
         <p>
-          <label>Your Last Name: <input type="text" name="lastname"
+          <label>Your Last Name: <input className="form-control" type="text" name="lastname"
           ref={register({ required: true, maxLength: 20 })} />
           {errors.lastname && 'Last name is required.'}
           </label>  
@@ -43,6 +43,7 @@ const Contact = () => {
 
         <p>
           <label>Your Email:<input
+          className="form-control"
         name="email"
         ref={register({
           required: 'Required',
@@ -56,12 +57,12 @@ const Contact = () => {
         </p>
 
         <p>
-          <label>Message: <input as="textarea" rows="6"name="message"
+          <label>Message: <input className="form-control" as="textarea" rows="6"name="message"
           ref={register}/> </label>
         </p>
 
         <p>
-        <button type="submit">Submit</button>
+        <button className="btn btn-outline-primary"type="submit">Submit</button>
         </p>
     </form>
   )
