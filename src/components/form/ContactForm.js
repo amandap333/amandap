@@ -41,7 +41,6 @@ const Contact = () => {
 
         <p>
           <label>Your Email:<input
-          className="form-control"
         name="email"
         ref={register({
           required: 'Required',
