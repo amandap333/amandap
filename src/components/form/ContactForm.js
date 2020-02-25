@@ -18,8 +18,7 @@ const Contact = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit(onSubmit)}
-      // className="centerBorder formStyle borderBlue"
-    >
+      className="centerBorder formStyle borderBlue" >
     <input type="hidden" name="form-name" value="contact"  />
         <p hidden> 
           <label>Don’t fill this out:<input name="bot-field"/> </label>
@@ -41,17 +40,17 @@ const Contact = () => {
         </p>
 
         <p>
-          <label>Your Email:<input
+        <input
         name="email"
         ref={register({
           required: 'Required',
           pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-            
+            message: "invalid email address"
           }
         })}
-      />  
-      {errors.email && "Invalid email address"}  </label>
+      />
+      {errors.email && errors.email.message}
         </p>
 
         <p>
@@ -60,7 +59,7 @@ const Contact = () => {
         </p>
 
         <p>
-          <input type="submit"/>
+        <button type="submit">Submit</button>
         </p>
     </form>
   );
