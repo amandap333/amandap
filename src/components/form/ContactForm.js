@@ -29,6 +29,9 @@ const Contact = () => {
           <label>Your First Name:<input type="text" className="form-control" name="firstname"
           ref={register({ required: true, maxLength: 20 })}/>
           {errors.firstname && 'First name is required.'}</label>  
+          <div class="valid-feedback">
+        Looks good!
+      </div>
         </p>
 
         <p>
