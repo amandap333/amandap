@@ -1,15 +1,16 @@
 import React from 'react'
 import  { useForm } from 'react-hook-form'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
 
 
+function App() {
+  const { register, handleSubmit, errors } = useForm();
 const Contact = () => {
   
-  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => {
+  // const { register, handleSubmit, errors } = useForm();
+  // const onSubmit = data => {
     console.log(data)
   }
+
 
   return (
     <form
