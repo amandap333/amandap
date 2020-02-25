@@ -18,7 +18,7 @@ const Contact = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit(onSubmit)}
-      className="centerBorder formStyle borderBlue"
+      // className="centerBorder formStyle borderBlue"
     >
     <input type="hidden" name="form-name" value="contact"  />
         <p hidden> 
@@ -60,11 +60,11 @@ const Contact = () => {
         </p>
 
         <p>
-          <button type="onSubmit">Send</button>
+          <input type="submit"/>
         </p>
     </form>
   );
-};
+}
 
   export default Contact
   
