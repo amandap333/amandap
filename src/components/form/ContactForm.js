@@ -9,7 +9,7 @@ const Contact = () => {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = data => {
     console.log(data)
-  };
+  }
 
   return (
     <form
@@ -17,12 +17,12 @@ const Contact = () => {
       method="POST" 
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit(onSubmit)}
-      className="centerBorder formStyle borderBlue" >
+      // onSubmit={handleSubmit(onSubmit)}
+      // className="centerBorder formStyle borderBlue" 
+      >
     <input type="hidden" name="form-name" value="contact"  />
         <p hidden> 
           <label>Don’t fill this out:<input name="bot-field"/> </label>
-          
         </p>
 
         <p>
@@ -36,25 +36,24 @@ const Contact = () => {
           ref={register({ required: true, maxLength: 20 })} />
           {errors.lastname && 'Last name is required.'}
           </label>  
-          
         </p>
 
         <p>
-        <input
+          <label>Your Email:<input
         name="email"
         ref={register({
           required: 'Required',
           pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-            message: "invalid email address"
+            
           }
         })}
-      />
-      {errors.email && errors.email.message}
+      />  
+      {errors.email && "Invalid email address"}  </label>
         </p>
 
         <p>
-          <label>Message: <input as="textarea" rows="3"name="message"
+          <label>Message: <input as="textarea" rows="6"name="message"
           ref={register}/> </label>
         </p>
 
@@ -62,7 +61,7 @@ const Contact = () => {
         <button type="submit">Submit</button>
         </p>
     </form>
-  );
+  )
 }
 
   export default Contact
