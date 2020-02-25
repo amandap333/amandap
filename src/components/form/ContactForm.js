@@ -27,21 +27,21 @@ const ContactForm = () => {
         </p>
 
         <p>
-          <Form.Label>Your First Name:<input type="text" name="firstname"
+          <label>Your First Name:<input type="text" name="firstname"
           ref={register({ required: true, maxLength: 20 })}/>
-          {errors.firstname && 'First name is required.'}</Form.Label>  
+          {errors.firstname && 'First name is required.'}</label>  
         </p>
 
         <p>
-          <Form.Label>Your Last Name: <input type="text" name="lastname"
+          <label>Your Last Name: <input type="text" name="lastname"
           ref={register({ required: true, maxLength: 20 })} />
           {errors.lastname && 'Last name is required.'}
-          </Form.Label>  
+          </label>  
           
         </p>
 
         <p>
-          <Form.Label>Your Email:<input
+          <label>Your Email:<input
         name="email"
         ref={register({
           required: 'Required',
@@ -51,12 +51,12 @@ const ContactForm = () => {
           }
         })}
       />  
-      {errors.email && "Invalid email address"}  </Form.Label>
+      {errors.email && "Invalid email address"}  </label>
         </p>
 
         <p>
-          <Form.Label>Message: <input as="textarea" rows="3"name="message"
-          ref={register}/> </Form.Label>
+          <label>Message: <input as="textarea" rows="3"name="message"
+          ref={register}/> </label>
         </p>
 
         <p>
