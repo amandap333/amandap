@@ -2,15 +2,12 @@ import React from 'react'
 import  { useForm } from 'react-hook-form'
 
 
-function App() {
-  const { register, handleSubmit, errors } = useForm();
-const Contact = () => {
-  
-  // const { register, handleSubmit, errors } = useForm();
-  // const onSubmit = data => {
-    console.log(data)
-  }
 
+const Contact = () => {
+    const { register, handleSubmit, errors } = useForm(); 
+    const onSubmit = data => {
+      console.log(data);
+    }
 
   return (
     <form
@@ -68,6 +65,7 @@ const Contact = () => {
     </form>
   )
 }
+
 
   export default Contact
   
