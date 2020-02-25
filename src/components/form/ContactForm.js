@@ -60,7 +60,7 @@ const Contact = () => {
         </p>
 
         <p>
-          <button type="submit" class="btn btn-outline-secondary">Send</button>
+          <button type="submit">Send</button>
         </p>
     </form>
   );
