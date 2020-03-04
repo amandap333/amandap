@@ -126,14 +126,17 @@ const handleChange = e => setState({ ...state, [e.target.name]: e.target.value }
             onChange={handleChange}
             ref={register({
               required: true,
-              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                message: "invalid email address"
+              }
             })}
           />
-          {errors.email && errors.email.type === 'required' &&
+          {/* {errors.email && errors.email.type === 'required' &&
             <Form.Control.Feedback type="invalid">
               Please provide an email.
             </Form.Control.Feedback>
-          }
+          } */}
         </p>
 
         <p>
