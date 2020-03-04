@@ -171,7 +171,7 @@ const handleChange = e => setState({ ...state, [e.target.name]: e.target.value }
         </p>
 
         <p>
-        <Button className="btn btn-outline-primary" type="submit">Submit</Button>
+        <Button className="" type="submit">Submit</Button>
         </p>
     </Form>
   )
