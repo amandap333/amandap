@@ -4,11 +4,30 @@ import  { useForm } from 'react-hook-form'
 
 
 const Contact = () => {
-    const { register, handleSubmit, errors } = useForm(); 
-    const onSubmit = data => {
-      console.log(data);
+    const { register, handleSubmit, errors, reset } = useForm({
+      mode: 'onChange',
+    })
+  
+    const onSubmit = (data, e) => {
+      e.preventDefault()
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          ...state,
+        }),
+      })
+        .then(response => {
+          setFeedbackMsg(` I'll get back to you soon.`)
+          reset()
+          console.log(response)
+        })
+        .catch(error => {
+          setFeedbackMsg("The form could not be submitted.")
+          console.log(error)
+        })
     }
-
   return (
     <form
       name="contact" 
@@ -24,12 +43,33 @@ const Contact = () => {
         </p>
 
         <p>
-          <label>Your First Name:<input type="text" className="form-control" name="firstname"
-          ref={register({ required: true, maxLength: 20 })}/>
-          {errors.firstname && 'First name is required.'}</label>  
-          <div class="valid-feedback">
-        Looks good!
-      </div>
+          <Form.Label>Your First Name:</Form.Label>
+          <Form.Control
+            className={
+              !JSON.stringify(formState.touched.name)
+              &&
+              !errors.firstname
+              ?
+                ""
+              :
+                JSON.stringify(formState.touched.firstname)
+                &&
+                !errors.firstname
+                ?
+                  "is-valid"
+                :
+                  "is-invalid"
+            }
+            type="text"
+            name="firstname"
+            onChange={handleChange}
+            ref={register({ required: true, maxLength: 25 })}
+          />
+          {errors.firstname && errors.firstname.type === 'required' &&
+            <Form.Control.Feedback type="invalid">
+              Please provide a name.
+            </Form.Control.Feedback>
+          }
         </p>
 
         <p>
