@@ -1,12 +1,19 @@
 import React from 'react'
 import  { useForm } from 'react-hook-form'
+import Form from 'react-bootstrap/Form'
 
-
-
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 const Contact = () => {
-    const { register, handleSubmit, errors, reset } = useForm({
+    const { register, handleSubmit, errors, reset,formState } = useForm({
       mode: 'onChange',
     })
+    const [state, setState] = React.useState({})
+    // const [setFeedbackMsg, setFeedbackMsg] = useState(null)
+    const handleChange = e => setState({ ...state, [e.target.name]: e.target.value })
   
     const onSubmit = (data, e) => {
       e.preventDefault()
@@ -18,15 +25,8 @@ const Contact = () => {
           ...state,
         }),
       })
-        .then(response => {
-          setFeedbackMsg(` I'll get back to you soon.`)
-          reset()
-          console.log(response)
-        })
-        .catch(error => {
-          setFeedbackMsg("The form could not be submitted.")
-          console.log(error)
-        })
+      .then(() => alert("Success!"))
+.catch(error => alert(error));
     }
   return (
     <form
