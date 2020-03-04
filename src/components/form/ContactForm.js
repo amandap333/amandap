@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import  { useForm } from 'react-hook-form'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 function encode(data) {
   return Object.keys(data)
@@ -11,23 +12,32 @@ const Contact = () => {
     const { register, handleSubmit, errors, reset, formState } = useForm({
       mode: 'onChange',
     })
+    const [setFeedbackMsg] = useState(null)
     const [state, setState] = React.useState({})
-
     const handleChange = e => setState({ ...state, [e.target.name]: e.target.value })
-  
-    const onSubmit = (data, e) => {
-      e.preventDefault()
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          ...state,
-        }),
+  const onSubmit = (data, e) => {
+    e.preventDefault()
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        // 'form-name': form.getAttribute('name'),
+        'form-name': 'contact',
+        ...state,
+      }),
+    })
+      .then(response => {
+        setFeedbackMsg(`Thanks for reaching out. I'll get back to you soon.`)
+        reset()
+        console.log(response)
       })
-      .then(() => alert("Success!"))
-.catch(error => alert(error));
-    }
+      .catch(error => {
+        setFeedbackMsg("Oops, something went wrong. The form could not be submitted.")
+        console.log(error)
+      })
+  }
+
+
   return (
     <Form
       name="contact" 
@@ -150,21 +160,21 @@ const Contact = () => {
                 :
                   "is-invalid"
             }
-            type="text"
+            type="email"
             name="email"
             onChange={handleChange}
-            ref={register({ required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            ref={register({ required: true,     pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
           })}
-          />
-          {errors.email && errors.email.type === 'required' &&
-            <Form.Control.Feedback type="invalid">
-              Please provide an email.
-            </Form.Control.Feedback>
-          }
+        />
+        {errors.email && errors.email.type === 'required' &&
+          <Form.Control.Feedback type="invalid">
+            Please provide your email address.
+          </Form.Control.Feedback>
+        }
         </p>
 
         <p>
-        <button className="btn btn-outline-primary" type="submit">Submit</button>
+        <Button className="btn btn-outline-primary" type="submit">Submit</Button>
         </p>
     </Form>
   )
