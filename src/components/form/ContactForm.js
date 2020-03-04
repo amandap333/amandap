@@ -8,11 +8,11 @@ function encode(data) {
     .join('&')
 }
 const Contact = () => {
-    const { register, handleSubmit, errors, reset,formState } = useForm({
+    const { register, handleSubmit, errors, reset, formState } = useForm({
       mode: 'onChange',
     })
     const [state, setState] = React.useState({})
-    // const [setFeedbackMsg, setFeedbackMsg] = useState(null)
+
     const handleChange = e => setState({ ...state, [e.target.name]: e.target.value })
   
     const onSubmit = (data, e) => {
@@ -29,7 +29,7 @@ const Contact = () => {
 .catch(error => alert(error));
     }
   return (
-    <form
+    <Form
       name="contact" 
       method="POST" 
       data-netlify="true"
@@ -46,7 +46,7 @@ const Contact = () => {
           <Form.Label>Your First Name:</Form.Label>
           <Form.Control
             className={
-              !JSON.stringify(formState.touched.name)
+              !JSON.stringify(formState.touched.firstname)
               &&
               !errors.firstname
               ?
@@ -67,41 +67,106 @@ const Contact = () => {
           />
           {errors.firstname && errors.firstname.type === 'required' &&
             <Form.Control.Feedback type="invalid">
-              Please provide a name.
+              Please provide a first name.
             </Form.Control.Feedback>
           }
         </p>
 
         <p>
-          <label>Your Last Name: <input className="form-control" type="text" name="lastname"
-          ref={register({ required: true, maxLength: 20 })} />
-          {errors.lastname && 'Last name is required.'}
-          </label>  
-        </p>
-
-        <p>
-          <label>Your Email:<input
-        name="email"
-        ref={register({
-          required: 'Required',
-          pattern: {
-            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-            
+          <Form.Label>Your Last Name:</Form.Label>
+          <Form.Control
+            className={
+              !JSON.stringify(formState.touched.lastname)
+              &&
+              !errors.lastname
+              ?
+                ""
+              :
+                JSON.stringify(formState.touched.lastname)
+                &&
+                !errors.lastname
+                ?
+                  "is-valid"
+                :
+                  "is-invalid"
+            }
+            type="text"
+            name="lastname"
+            onChange={handleChange}
+            ref={register({ required: true, maxLength: 25 })}
+          />
+          {errors.lastname && errors.lastname.type === 'required' &&
+            <Form.Control.Feedback type="invalid">
+              Please provide a last name.
+            </Form.Control.Feedback>
           }
-        })}
-      />  
-      {errors.email && "Invalid email address"}  </label>
         </p>
 
         <p>
-          <label>Message: <input className="form-control" as="textarea" rows="6"name="message"
-          ref={register}/> </label>
+          <Form.label>Message: </Form.label><Form.Control className={
+              !JSON.stringify(formState.touched.message)
+              &&
+              !errors.message
+              ?
+                ""
+              :
+                JSON.stringify(formState.touched.message)
+                &&
+                !errors.message
+                ?
+                  "is-valid"
+                :
+                  "is-invalid"
+            }
+            as="textarea"
+            rows="4"
+            name="message"
+            onChange={handleChange}
+            ref={register({ required: true })}
+          />
+                    {errors.message && errors.message.type === 'required' &&
+            <Form.Control.Feedback type="invalid">
+              Please provide a message.
+            </Form.Control.Feedback>
+          }
+
+        </p>
+
+        <p>
+          <Form.Label>Your Email:</Form.Label>
+          <Form.Control
+            className={
+              !JSON.stringify(formState.touched.email)
+              &&
+              !errors.email
+              ?
+                ""
+              :
+                JSON.stringify(formState.touched.email)
+                &&
+                !errors.email
+                ?
+                  "is-valid"
+                :
+                  "is-invalid"
+            }
+            type="text"
+            name="email"
+            onChange={handleChange}
+            ref={register({ required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          })}
+          />
+          {errors.email && errors.email.type === 'required' &&
+            <Form.Control.Feedback type="invalid">
+              Please provide an email.
+            </Form.Control.Feedback>
+          }
         </p>
 
         <p>
         <button className="btn btn-outline-primary" type="submit">Submit</button>
         </p>
-    </form>
+    </Form>
   )
 }
 
