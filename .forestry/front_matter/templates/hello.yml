@@ -2,12 +2,8 @@
 label: Hello
 hide_body: false
 fields:
-- name: date
-  type: datetime
-  label: date
-  description: ''
-  config:
-    required: false
-    date_format: 
-    time_format: 
-    display_utc: false
+- name: template
+  type: include
+  config: {}
+  template: hello
+  label: template
