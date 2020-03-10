@@ -18,5 +18,9 @@
   {
     "title": "Work",
     "path": "/work"
+  },
+  {
+    "title": "Blog",
+    "path": "/blog"
   }
 ]

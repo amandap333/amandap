@@ -17,7 +17,7 @@ const Footer = ({ location }) => {
           <Col>
             <Sitemap location={location} />
             <p className="text-center">
-              © {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a>
+              © {new Date().getFullYear()}, Amanda Proffit{` `} <a href="https://www.gatsbyjs.org">:)</a>
             </p>
           </Col>
         </Row>
