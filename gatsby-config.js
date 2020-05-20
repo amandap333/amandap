@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
+    'gatsby-plugin-postcss',
 
     // `gatsby-plugin-netlify-cms`,
     {
@@ -22,6 +23,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./src/data/`,
+      },
+    },
+    { 
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/pages/markdown-pages`,
       },
     },
     `gatsby-transformer-remark`,
