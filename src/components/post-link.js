@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const PostLink = ({ post }) => (
   <div>
-    <Link className="text-purple-400" to={post.frontmatter.path}>
+    <Link className="text-pink-900" to={post.frontmatter.path}>
       {post.frontmatter.title} ({post.frontmatter.date})
     </Link>
   </div>
