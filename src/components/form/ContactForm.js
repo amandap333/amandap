@@ -171,7 +171,7 @@ const handleChange = e => setState({ ...state, [e.target.name]: e.target.value }
         </p>
 
         <p>
-        <Button className="" type="submit">Submit</Button>
+        <Button className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 " type="submit">Submit</Button>
         </p>
     </Form>
   )

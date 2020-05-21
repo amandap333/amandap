@@ -12,8 +12,8 @@ import Header from './header/header'
 import Footer from './footer/footer'
 
 import 'typeface-open-sans'
-import '../css/global.css'
-import '../global-scss/index.scss'
+import '../css/tailwind.css'
+import '../global-css/index.scss'
 
 
 const Layout = ({ children, location }) => {

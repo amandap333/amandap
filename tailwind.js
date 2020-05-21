@@ -1,7 +1,11 @@
 module.exports = {
-  purge: [],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
+    }
   },
   variants: {},
   plugins: [],
