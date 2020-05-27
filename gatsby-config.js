@@ -6,7 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-json`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        // Configure SASS to process Tailwind
+        postCssPlugins: [require('tailwindcss')],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
     'gatsby-plugin-postcss',

@@ -16,7 +16,7 @@ $dark: #2E1114;
 $medium: #6757b1;
 
 $mywhite: #fff;
-$myblack: #000;
+$myblack: rgba(0, 0, 17, 0.719);
 
 // $link-color: $secondary;
 // $link-hover-color: $primary;
@@ -52,9 +52,9 @@ main {
 }
 
 ul,
-ol,
-p {
-  color: $purple;
+ol
+  {
+  color: $myblack;
 }
 
 h1,
