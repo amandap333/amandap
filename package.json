@@ -22,7 +22,7 @@
     "gatsby-remark-responsive-iframe": "^2.2.33",
     "gatsby-source-filesystem": "^2.3.5",
     "gatsby-transformer-json": "^2.2.27",
-    "gatsby-transformer-remark": "^2.6.56",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.18",
     "netlify-cms": "^2.10.30",
     "node-sass": "^4.14.1",
